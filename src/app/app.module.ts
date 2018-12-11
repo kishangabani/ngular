@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component'; // Automatic update courses component
+import { CoursesService } from './courses.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { CourseComponent } from './course/course.component'; // Automatic update
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    CoursesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
