@@ -16,7 +16,8 @@ export class AppComponent implements OnInit{
   newCategory: Category = new Category();
   selectedCategory: Category;
 
-  constructor(private todoDataService: TodoDataService, private categoryDataService: CategoryDataService) {
+  constructor(private todoDataService: TodoDataService, 
+              private categoryDataService: CategoryDataService) {
   }
 
 
