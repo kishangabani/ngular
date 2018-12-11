@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component'; // Automatic update courses component
 import { CoursesService } from './courses.service';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CoursesService } from './courses.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    MDBBootstrapModule.forRoot()  
   ],
   providers: [
     CoursesService
