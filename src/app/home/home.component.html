@@ -1,8 +1,14 @@
 <title>{{title}}</title>
-<h2>{{hero.name | uppercase}} Details</h2>
-<div><span>id: </span>{{hero.id}}</div>
+
 <div>
-  <label>name:
-    <input [(ngModel)]="hero.name" placeholder="name">
+    <h2>{{home.name | uppercase}} Details</h2>
+  <span>ID: </span>{{home.id}}</div>
+<div>
+  <label>Name:
+    <input [(ngModel)]="home.name" placeholder="enterName">
   </label>
 </div>
+
+<div>
+    <router-outlet></router-outlet>
+    </div>

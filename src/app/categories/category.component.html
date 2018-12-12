@@ -1,0 +1,45 @@
+<div class="col-md-5 list mb-1" *ngIf="selectedCategory; else elseBlock">
+    <div class="row px-3 py-3">
+        <div class="col-md-12">
+            <h4>{{selectedCategory.name}}</h4>
+        </div>
+    </div>
+    <div class="row px-4 mt-3">
+        <div class="form-group full-width" *ngIf="todosForCat.length > 0">
+            <form class="full-width">
+                <div *ngFor="let todo of todosForCat">
+                    <input type="checkbox" id="{{todo.id}}" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
+                    <label for="{{todo.id}}" [ngClass]="{'strikethrough' : todo.complete}">{{todo.title}}</label>
+                    <button type="button" class="close" aria-label="Close" style="float: right;" (click)="removeTodo(todo)">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row px-4 mt-1">
+        <div class="md-form">
+            <form>
+                <a class="prefix">
+                    <i class="fa fa-plus prefix" (click)="addTodo()"></i>
+                </a>
+                <input mdbActive type="text" id="form2" class="form-control" [(ngModel)]="newTodo.title"
+                    (keyup.enter)="addTodo()" name="addNew">
+                <label for="form2">Add new task</label>
+            </form>
+        </div>
+    </div>
+</div>
+<ng-template #elseBlock>
+    <div class="col-md-5 test 5 list text-center">
+        <h5 class="pt-3">Choose category from menu in the left.</h5>
+        <p class="pt-5">You can also create a new category by typing the name and pressing the enter or
+            clicking on the
+            <span class="badge primary-color badge-pill">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </span>
+            button.
+        </p>
+    </div>
+</ng-template>
+</div>

@@ -12,6 +12,9 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    let initCat = new Home();
+    initCat = {'name' : 'Today', 'id' : 1 };
+    this.home;
   }
 
 }

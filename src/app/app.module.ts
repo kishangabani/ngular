@@ -4,10 +4,12 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component'; // Automatic update courses component
 import { CoursesService } from './courses.service';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { routes } from './app.router';
 import { HomeComponent } from './home/home.component';
+
+
 
 
 @NgModule({
@@ -15,14 +17,14 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     CourseComponent,
     CoursesComponent,
-    HomeComponent
+    HomeComponent,
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    routes,
-    MDBBootstrapModule.forRoot()  
+    RouterModule.forRoot(routes)
+    //MDBBootstrapModule  
   ],
   providers: [
     CoursesService

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Course Project</a>
+        <a class="navbar-brand" [routerLink]="['']">Course Project</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -7,10 +7,12 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" routerLink="/Home">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" [routerLink]="['/Home']">Home 
+                <!-- <span class="sr-only">(current)</span> -->
+            </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="">ToDo List App</a>
+              <a class="nav-link" [routerLink]="['/Course']">ToDo List App</a>
             </li>
           </ul>
         </div>
@@ -19,7 +21,7 @@
 
       
 
-      <div class="container">
+ <!-- <div class="container">
             <div class="row mt-5 ">
                 <div class="col-md-3 offset-md-2 left-column mb-1">
                     <ul class="list-group">
@@ -86,6 +88,7 @@
                     </div>
                 </ng-template>
             </div>
-        </div> 
-        
+        </div>  -->
+                 <div>
             <router-outlet></router-outlet>
+            </div>

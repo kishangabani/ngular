@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row mt-5 ">
+      <div class="col-md-3 offset-md-2 left-column mb-1">
+          <ul class="list-group">
+              <li *ngFor="let category of categories" class="list-group-item d-flex justify-content-between align-items-center"
+                  (click)="onSelect(category)">
+                  {{category.name}}
+                  <span class="badge primary-color badge-pill">{{countTodosByCat(category.id)}}</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <form>
+                      <input mdbActive type="text" placeholder="Add new category" id="form1" class="form-control"
+                          [(ngModel)]="newCategory.name" (keyup.enter)="addCategory()" name="addCat">
+                  </form>
+                  <span class="badge primary-color badge-pill">
+                      <a class="prefix">
+                          <i class="fa fa-plus" aria-hidden="true" (click)="addCategory()"></i>
+                      </a>
+                  </span>
+              </li>
+          </ul>
+      </div>
