@@ -7,13 +7,15 @@ import { CoursesService } from './courses.service';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { routes } from './app.router';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseComponent,
-    CoursesComponent
+    CoursesComponent,
+    HomeComponent
     
   ],
   imports: [

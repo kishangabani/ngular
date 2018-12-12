@@ -11,7 +11,7 @@ import { Category } from './categories/category';
   providers:[TodoDataService,CategoryDataService]
 })
 export class AppComponent implements OnInit{
-
+  title ='Home';
   newTodo: Todo = new Todo();
   newCategory: Category = new Category();
   selectedCategory: Category;
